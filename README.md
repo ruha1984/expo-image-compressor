@@ -1,6 +1,6 @@
-# expo-image-compressor-ios
+# @rahimwws/expo-image-compressor
 
-[![npm version](https://badge.fury.io/js/expo-image-compressor-ios.svg)](https://badge.fury.io/js/expo-image-compressor-ios)
+[![npm version](https://badge.fury.io/js/@rahimwws/expo-image-compressor.svg)](https://badge.fury.io/js/@rahimwws/expo-image-compressor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Lossy image compression for Expo and React Native apps targeting iOS. The module wraps a native implementation built with Expo Modules and provides simple TypeScript bindings plus a web shim that returns the original file.
@@ -20,9 +20,9 @@ Lossy image compression for Expo and React Native apps targeting iOS. The module
 ## Installation
 
 ```sh
-npm install expo-image-compressor-ios
+npm install @rahimwws/expo-image-compressor
 # or
-yarn add expo-image-compressor-ios
+yarn add @rahimwws/expo-image-compressor
 ```
 
 Run `npx pod-install` afterwards to make sure the native module is linked in your iOS project.
@@ -39,7 +39,7 @@ Run `npx pod-install` afterwards to make sure the native module is linked in you
 ### Basic Usage
 
 ```ts
-import { compress, type ImageAsset } from "expo-image-compressor-ios";
+import { compress, type ImageAsset } from "@rahimwws/expo-image-compressor";
 
 const asset: ImageAsset = { uri: localUri };
 
@@ -58,7 +58,7 @@ console.log(result.size); // bytes
 #### Compress with different quality levels
 
 ```ts
-import { compress } from "expo-image-compressor-ios";
+import { compress } from "@rahimwws/expo-image-compressor";
 
 // High quality compression
 const highQuality = compress(image, { quality: 0.9 });
@@ -73,7 +73,7 @@ const lowQuality = compress(image, { quality: 0.3 });
 #### Resize images
 
 ```ts
-import { compress } from "expo-image-compressor-ios";
+import { compress } from "@rahimwws/expo-image-compressor";
 
 // Resize to specific dimensions
 const resized = compress(image, {
@@ -93,7 +93,7 @@ const widthLimited = compress(image, {
 
 ```ts
 import * as ImagePicker from "expo-image-picker";
-import { compress } from "expo-image-compressor-ios";
+import { compress } from "@rahimwws/expo-image-compressor";
 
 const pickImage = async () => {
   const result = await ImagePicker.launchImageLibraryAsync({
@@ -105,7 +105,7 @@ const pickImage = async () => {
   if (!result.canceled) {
     const compressed = compress(
       { uri: result.assets[0].uri },
-      { quality: 0.6, maxWidth: 1080 },
+      { quality: 0.6, maxWidth: 1080 }
     );
 
     console.log("Original size:", result.assets[0].fileSize);

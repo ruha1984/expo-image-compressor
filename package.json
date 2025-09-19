@@ -1,5 +1,5 @@
 {
-  "name": "expo-image-compressor-ios",
+  "name": "@rahimwws/expo-image-compressor",
   "version": "1.0.0",
   "description": "Lossy image compression for Expo and React Native (iOS + web shim).",
   "main": "build/index.js",
