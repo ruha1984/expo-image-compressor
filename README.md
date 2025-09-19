@@ -1,6 +1,6 @@
-# expo-image-compressor
+# expo-image-compressor-ios
 
-[![npm version](https://badge.fury.io/js/expo-image-compressor.svg)](https://badge.fury.io/js/expo-image-compressor)
+[![npm version](https://badge.fury.io/js/expo-image-compressor-ios.svg)](https://badge.fury.io/js/expo-image-compressor-ios)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Lossy image compression for Expo and React Native apps targeting iOS. The module wraps a native implementation built with Expo Modules and provides simple TypeScript bindings plus a web shim that returns the original file.
@@ -176,7 +176,7 @@ npm run clean      # Remove build artifacts
 ### Releasing
 
 1. Update the version in `package.json`.
-2. Commit changes and create a git tag matching the version (e.g. `v0.1.0`).
+2. Commit changes and create a git tag matching the version (e.g. `v1.0.0`).
 3. Run `npm run clean && npm run build`.
 4. Inspect the package with `npm pack`.
 5. Publish with `npm publish`.
