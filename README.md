@@ -132,20 +132,22 @@ Returns a `CompressResult` containing the new `uri`, `width`, `height`, and byte
 > **Note**
 > If the source is already smaller than the requested dimensions the original resolution is kept.
 
-
 ## Platform implementations
 
 ### iOS
+
 - Handles both local `file://` URIs and `ph://` identifiers from the photo library.
 - Automatically selects JPEG encoding when possible, otherwise falls back to PNG.
 - Keeps aspect ratio when resizing with `maxWidth`/`maxHeight`.
 
 ### Android
+
 - Supports `content://`, `file://` URIs and local file paths.
 - Uses native Bitmap API for efficient compression and resizing.
 - Automatically detects image format and applies appropriate compression.
 
 ### Web
+
 - Uses Canvas API with ImageBitmap and HTMLImageElement support.
 - Supports both JPEG and PNG output formats.
 - Handles CORS-enabled images and blob URLs.
