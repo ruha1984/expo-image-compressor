@@ -1,7 +1,7 @@
 {
   "name": "@rahimwws/expo-image-compressor",
-  "version": "1.0.0",
-  "description": "Lossy image compression for Expo and React Native (iOS + web shim).",
+  "version": "1.1.0",
+  "description": "Cross-platform image compression for Expo and React Native (iOS, Android, Web).",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
@@ -29,11 +29,14 @@
     "image",
     "compression",
     "ios",
+    "android",
+    "web",
     "jpeg",
     "png",
     "photo",
     "resize",
-    "optimize"
+    "optimize",
+    "cross-platform"
   ],
   "repository": {
     "type": "git",

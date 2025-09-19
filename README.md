@@ -3,19 +3,18 @@
 [![npm version](https://badge.fury.io/js/@rahimwws/expo-image-compressor.svg)](https://badge.fury.io/js/@rahimwws/expo-image-compressor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Lossy image compression for Expo and React Native apps targeting iOS. The module wraps a native implementation built with Expo Modules and provides simple TypeScript bindings plus a web shim that returns the original file.
+Cross-platform image compression for Expo and React Native apps. The module provides native implementations for iOS, Android, and Web platforms with simple TypeScript bindings.
 
 ## Features
 
-- 🚀 **Synchronous iOS compression** with configurable quality and size caps
+- 🚀 **Cross-platform compression** - iOS, Android, and Web support
 - 📱 **Works with `ph://` library assets** or local file URIs
 - 🔧 **Strict TypeScript types** for options and results
-- 🌐 **Web fallback** that returns the original image (no compression)
-- ⚡ **Fast and efficient** native implementation
+- 🌐 **Web implementation** with Canvas API and ImageBitmap support
+- 🤖 **Android implementation** with native Bitmap API
+- ⚡ **Fast and efficient** native implementations
 - 📦 **Zero dependencies** - lightweight package
 - 🎯 **Expo Modules** compatible
-
-> **Note**: Android implementation is not available yet. This package currently supports iOS and web platforms.
 
 ## Installation
 
@@ -30,6 +29,8 @@ Run `npx pod-install` afterwards to make sure the native module is linked in you
 ### Requirements
 
 - **iOS**: iOS 11.0+
+- **Android**: API level 21+
+- **Web**: Modern browsers with Canvas API support
 - **Expo**: SDK 49+
 - **React Native**: 0.70+
 - **Node.js**: 16.0+
@@ -131,15 +132,23 @@ Returns a `CompressResult` containing the new `uri`, `width`, `height`, and byte
 > **Note**
 > If the source is already smaller than the requested dimensions the original resolution is kept.
 
-### Web fallback
 
-On the web the module simply echoes the input `uri` and reports zero dimensions and size. Consider guarding calls on web builds if compression is required.
+## Platform implementations
 
-## iOS implementation notes
-
+### iOS
 - Handles both local `file://` URIs and `ph://` identifiers from the photo library.
 - Automatically selects JPEG encoding when possible, otherwise falls back to PNG.
 - Keeps aspect ratio when resizing with `maxWidth`/`maxHeight`.
+
+### Android
+- Supports `content://`, `file://` URIs and local file paths.
+- Uses native Bitmap API for efficient compression and resizing.
+- Automatically detects image format and applies appropriate compression.
+
+### Web
+- Uses Canvas API with ImageBitmap and HTMLImageElement support.
+- Supports both JPEG and PNG output formats.
+- Handles CORS-enabled images and blob URLs.
 
 ## Troubleshooting
 
