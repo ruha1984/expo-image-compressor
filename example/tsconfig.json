@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-image-compressor": ["../src/index"],
+      "expo-image-compressor/*": ["../src/*"]
+    }
+  }
+}
